@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --padding: 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  font-size: 16px;
+  height: 100%;
+  font-family: "Karla";
+  background-color: var(--light-gray);
+  line-height: 1.5rem;
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.card {
+  color: var(--light-gray);
+  background-color: rgba(162, 19, 19, 0);
+  display: grid;
+  grid-template-columns: 285px 285px;
+  grid-template-rows: 195px 235px;
+  grid-template-areas:
+    "community community"
+    "subscription why-us";
+  box-shadow: 0px 10px 20px 4px hsl(0, 0%, 0%, 0.15);
+}
+
+/* ---- contents ---- */
+
+.container-community {
+  display: grid;
+  grid-area: community;
+  background-color: white;
+  padding: var(--padding);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.container-subscription {
+  display: grid;
+  grid-area: subscription;
+  border-radius: 0 0 0 0.5rem;
+  padding: var(--padding);
+  background-color: var(--cyan);
+}
+
+.container-why-us {
+  background-color: hsl(179, 47%, 52%);
+  display: grid;
+  grid-area: why-us;
+  border-radius: 0 0 0.5rem 0;
+  padding: var(--padding) 4rem var(--padding) var(--padding);
+  gap: 1rem;
+}
+
+/* ---- textos e etc ---- */
+
+.title {
+  font-size: 1.5rem;
+  color: var(--cyan);
+  padding: 0 0 1rem;
+}
+
+.subtitle-01 {
+  color: var(--bright-yellow);
+  font-size: 1rem;
+}
+
+.info-promotion {
+  font-size: 0.9rem;
+  color: var(--grayish-blue);
+}
+/* subscription section */
+
+.title-subscription {
+  font-size: 1rem;
+}
+
+.value-subscription {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+}
+
+.value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.info-subscription {
+  font-size: 0.9rem;
+}
+
+.button-sing-up {
+  color: var(--light-gray);
+  font-weight: 700;
+  background-color: var(--bright-yellow);
+  border-style: none;
+  border-radius: 0.3rem;
+  padding: 0.3rem;
+  box-shadow: 0px 10px 10px 0px hsl(0, 0%, 0%, 0.15);
+}
+
+/* why-us section */
+
+.subtitle-why-us {
+  font-size: 1rem;
+}
+
+.why-us {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 375px) {
+  :root {
+    --padding: 1.5rem;
+  }
+
+  .container {
+    margin: 8rem 0;
+  }
+
+  .card {
+    grid-template-columns: 310px;
+    grid-template-rows: 260px 230px 230px;
+    grid-template-areas:
+      "community"
+      "subscription"
+      "why-us";
+  }
+
+
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .container-subscription {
+    border-radius: 0;
+  }
+
+
+
+  .title-subscription {
+    font-size: 1.1rem;
+  }
+  
+  .value-subscription {
+    gap: 0.8rem;
+  }
+  
+  .value {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .info-subscription {
+    font-size: 0.95rem;
+  }
+
+
+
+  .container-why-us {
+    border-radius: 0 0 0.3rem 0.3rem;
+  }
+
+
+  .subtitle-why-us {
+    font-size: 1.2rem;
+  }
+
+  .why-us {
+    font-size: 0.85rem;
+  }
+}
